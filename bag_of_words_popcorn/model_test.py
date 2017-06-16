@@ -1,16 +1,12 @@
 import numpy as np
 import pandas as pd
-from sklearn.feature_extraction.text import CountVectorizer
 import _pickle as pkl
-import importlib, sys
+import importlib
 
 text_cleaner = importlib.import_module('text_cleaner')
 
 # Read the test data
 test = pd.read_csv("data/testData.tsv", header=0, delimiter="\t", quoting=3)
-
-print(test)
-sys.exit(0)
 
 # Verify that there are 25,000 rows and 2 columns
 print("Test data shape", test.shape)
